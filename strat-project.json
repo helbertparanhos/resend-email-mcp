@@ -1,0 +1,26 @@
+{
+  "name": "resend-email-mcp",
+  "title": "Resend Email MCP",
+  "type": "mcp-server",
+  "description": "O MCP mais completo para a API do Resend — envio, domínios, contatos, broadcasts, templates, webhooks + camada de debug/diagnóstico.",
+  "status": "stable",
+  "version": "1.0.0",
+  "visibility": "public",
+  "install": "npx -y resend-email-mcp",
+  "homepage": "https://www.npmjs.com/package/resend-email-mcp",
+  "language": "typescript",
+  "features": [
+    "75 tools + 2 resources cobrindo toda a API do Resend",
+    "Envio de emails (com anexos locais), batch, preview e broadcasts",
+    "Gestão de domínios, contatos, segmentos e templates",
+    "Webhooks e tópicos",
+    "Camada de debug: análise de deliverability, troubleshooting de DNS, inspeção de email",
+    "Modo readonly, annotations MCP e escape hatch resend_raw"
+  ],
+  "depends_on": [],
+  "tags": ["mcp", "resend", "email", "deliverability"],
+  "owner": "Helbert Paranhos / Strat Academy",
+  "tools": 75,
+  "resources": 2,
+  "updated": "2026-06-08"
+}

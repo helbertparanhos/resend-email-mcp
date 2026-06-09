@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0",
+  "created_at": "2026-06-08T00:00:00.000Z",
+  "project_type": "mcp-typescript",
+  "internal": false,
+  "references": [
+    {
+      "url": "https://resend.com/docs/api-reference",
+      "fetched_at": "2026-06-08T00:00:00.000Z",
+      "description": "Official Resend API reference (authoritative endpoint surface)",
+      "tools_found": ["emails", "domains", "api-keys", "broadcasts", "contacts", "segments", "topics", "templates", "webhooks", "logs"]
+    },
+    {
+      "url": "https://resend.com/docs/llms.txt",
+      "fetched_at": "2026-06-08T00:00:00.000Z",
+      "description": "Resend docs LLM index — used to enumerate every endpoint + HTTP method/path",
+      "tools_found": [
+        "POST /emails", "POST /emails/batch", "GET /emails/{id}", "PATCH /emails/{id}", "POST /emails/{id}/cancel", "GET /emails",
+        "GET /emails/{id}/attachments", "GET /emails/received", "GET /emails/received/{id}",
+        "POST /domains", "GET /domains", "GET /domains/{id}", "PATCH /domains/{id}", "DELETE /domains/{id}", "POST /domains/{id}/verify",
+        "POST /api-keys", "GET /api-keys", "DELETE /api-keys/{id}",
+        "POST /broadcasts", "GET /broadcasts", "GET /broadcasts/{id}", "PATCH /broadcasts/{id}", "POST /broadcasts/{id}/send", "DELETE /broadcasts/{id}",
+        "POST /contacts", "GET /contacts", "GET /contacts/{id}", "PATCH /contacts/{id}", "DELETE /contacts/{id}",
+        "POST /contact-properties", "GET /contact-properties", "POST /segments", "GET /segments",
+        "POST /templates", "GET /templates", "POST /templates/{id}/publish", "POST /templates/{id}/duplicate",
+        "POST /topics", "GET /topics", "POST /webhooks", "GET /webhooks", "GET /logs", "GET /logs/{id}"
+      ]
+    },
+    {
+      "url": "https://github.com/resend/resend-mcp",
+      "fetched_at": "2026-06-08T00:00:00.000Z",
+      "description": "Official Resend MCP — primary reference for tool naming/coverage. We extend it with a debug/diagnostics layer, /logs tools, readonly mode and a raw escape hatch.",
+      "tools_found": ["emails", "received", "contacts", "broadcasts", "templates", "domains", "segments", "topics", "contact-properties", "api-keys", "webhooks"]
+    },
+    {
+      "url": "https://github.com/PSU3D0/resend-mcp",
+      "fetched_at": "2026-06-08T00:00:00.000Z",
+      "description": "Community MCP exposing 49 tools — coverage benchmark",
+      "tools_found": ["emails", "domains", "contacts", "templates", "broadcasts", "webhooks"]
+    },
+    {
+      "url": "https://github.com/Hawstein/resend-mcp",
+      "fetched_at": "2026-06-08T00:00:00.000Z",
+      "description": "Minimal reference (single send_email tool)",
+      "tools_found": ["send_email"]
+    },
+    {
+      "url": "https://github.com/resend/resend-skills/blob/main/skills/resend/SKILL.md",
+      "fetched_at": "2026-06-08T00:00:00.000Z",
+      "description": "Official Resend skill — source of best practices (idempotency, sandbox addresses, webhook verification, common gotchas)",
+      "tools_found": ["sending", "receiving", "templates", "domains", "contacts", "broadcasts", "webhooks"]
+    }
+  ]
+}

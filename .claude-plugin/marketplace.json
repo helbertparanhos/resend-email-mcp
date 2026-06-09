@@ -1,0 +1,36 @@
+{
+  "name": "resend-email-mcp",
+  "displayName": "Resend Email MCP",
+  "description": "The most complete MCP server for the Resend API — emails, domains, contacts, broadcasts, templates, webhooks, plus a unique debug/diagnostics layer (deliverability, DNS, bounces).",
+  "version": "1.0.0",
+  "author": "helbertparanhos",
+  "license": "MIT",
+  "category": "Email",
+  "tags": ["mcp", "resend", "email", "deliverability", "transactional-email", "automation"],
+  "repository": "https://github.com/helbertparanhos/resend-email-mcp",
+  "npm": "resend-email-mcp",
+  "tools": 75,
+  "transport": "stdio",
+  "auth": "env",
+  "envVars": [
+    {
+      "name": "RESEND_API_KEY",
+      "description": "Resend API key (https://resend.com/api-keys)",
+      "required": true,
+      "sensitive": true
+    },
+    {
+      "name": "RESEND_FROM",
+      "description": "Default sender address (verified domain)",
+      "required": false,
+      "sensitive": false
+    },
+    {
+      "name": "RESEND_READONLY",
+      "description": "Set true to block all mutating tools",
+      "required": false,
+      "sensitive": false
+    }
+  ],
+  "quickstart": { "command": "npx", "args": ["-y", "resend-email-mcp"] }
+}

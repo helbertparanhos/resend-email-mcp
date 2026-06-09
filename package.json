@@ -1,0 +1,61 @@
+{
+  "name": "resend-email-mcp",
+  "version": "1.0.0",
+  "description": "The most complete MCP server for the Resend API — send emails, manage domains, contacts, broadcasts, templates, webhooks, plus a unique debug/diagnostics layer (deliverability analysis, DNS troubleshooting, email inspection).",
+  "type": "module",
+  "bin": {
+    "resend-email-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', 0o755)\"",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "resend",
+    "resend-mcp",
+    "email",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "ai",
+    "transactional-email",
+    "deliverability",
+    "smtp",
+    "dns",
+    "spf",
+    "dkim",
+    "dmarc"
+  ],
+  "author": "Helbert Paranhos / Strat Academy <contato@helbertparanhos.com.br>",
+  "license": "MIT",
+  "homepage": "https://github.com/helbertparanhos/resend-email-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helbertparanhos/resend-email-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/helbertparanhos/resend-email-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8",
+    "zod-to-json-schema": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}

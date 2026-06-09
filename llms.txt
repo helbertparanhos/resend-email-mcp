@@ -1,0 +1,82 @@
+# resend-email-mcp
+
+> The most complete MCP server for the Resend email API — full API coverage plus a unique debug/diagnostics layer.
+
+resend-email-mcp is an MCP (Model Context Protocol) server that lets you control Resend
+(send and manage emails, domains, contacts, broadcasts, templates, webhooks) from Claude Code,
+Cursor, and Claude Desktop. Beyond CRUD, it adds diagnostic tools no other Resend MCP offers:
+deliverability analysis, DNS troubleshooting, email lifecycle inspection, bounce explanation,
+and account auditing.
+
+## Tools (75 total)
+
+### Emails
+- `send_email`, `send_batch_emails`, `get_email`, `list_emails`, `update_email`, `cancel_email`
+- `preview_email`: dry-run a message (resolve sender, size attachments, surface warnings) without sending
+- Attachments by base64 `content`, public URL `path`, or sandboxed local `localPath`
+
+### Attachments & received email
+- `list_email_attachments`, `get_email_attachment`
+- `list_received_emails`, `get_received_email`, `list_received_attachments`, `get_received_attachment`
+
+### Domains, keys, broadcasts
+- Domains: `create_domain`, `get_domain`, `list_domains`, `update_domain`, `delete_domain`, `verify_domain`
+- API keys: `create_api_key`, `list_api_keys`, `delete_api_key`
+- Broadcasts: `create_broadcast`, `get_broadcast`, `list_broadcasts`, `update_broadcast`, `send_broadcast`, `delete_broadcast`
+
+### Audience
+- Contacts (incl. topics/segments), contact properties, segments, templates, topics — full CRUD
+
+### Webhooks & logs
+- Webhooks: create/get/list/update/delete
+- Logs: `list_logs`, `get_log`
+
+### Debug / diagnostics (the differentiator)
+- `diagnose_domain`: inspect SPF/DKIM/DMARC DNS records and report what's missing + fixes
+- `analyze_deliverability`: delivery/bounce/complaint/suppressed rates with a health verdict
+- `inspect_email`: full lifecycle timeline of one email
+- `explain_bounce`: classify a bounce (hard/soft/block) and recommend an action
+- `audit_account`: one-shot account health check
+- `search_logs`: smart filtering of API logs to find failures
+- `test_send`: safely simulate delivered/bounced/complained via Resend sandbox addresses
+
+### Escape hatch
+- `resend_raw`: call any Resend endpoint not yet wrapped in a dedicated tool
+
+## Resources
+- `resend://account` — domains + API keys snapshot
+- `resend://domains` — sending domains with verification status
+
+## Quick install
+
+Add to claude_desktop_config.json or .mcp.json:
+```json
+{
+  "mcpServers": {
+    "resend": {
+      "command": "npx",
+      "args": ["-y", "resend-email-mcp"],
+      "env": { "RESEND_API_KEY": "re_xxxxxxxx" }
+    }
+  }
+}
+```
+
+## Environment variables
+
+- `RESEND_API_KEY` (required): create at https://resend.com/api-keys
+- `RESEND_FROM` (optional): default sender, must be a verified domain
+- `RESEND_REPLY_TO` (optional): default Reply-To
+- `RESEND_READONLY` (optional): `true` blocks all mutating tools
+- `RESEND_ATTACHMENTS_DIR` (optional): enables and sandboxes `localPath` attachments
+- `RESEND_BASE_URL` (optional): override API base URL (https only, except localhost)
+
+## Known limitations
+
+- `analyze_deliverability` / `audit_account` sample the most recent 100 emails (one page), not full history.
+- Disk attachments (`localPath`) are disabled unless `RESEND_ATTACHMENTS_DIR` is set.
+
+## Links
+
+- GitHub: https://github.com/helbertparanhos/resend-email-mcp
+- npm: https://www.npmjs.com/package/resend-email-mcp
