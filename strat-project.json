@@ -4,7 +4,7 @@
   "type": "mcp-server",
   "description": "O MCP mais completo para a API do Resend — envio, domínios, contatos, broadcasts, templates, webhooks + camada de debug/diagnóstico.",
   "status": "stable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "visibility": "public",
   "install": "npx -y resend-email-mcp",
   "homepage": "https://www.npmjs.com/package/resend-email-mcp",

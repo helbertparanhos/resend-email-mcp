@@ -16,7 +16,7 @@ import { zodToJsonSchema } from "zod-to-json-schema";
 import { ResendClient, ResendError } from "./client.js";
 import { allTools, toolsByName } from "./tools/index.js";
 
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 
 /**
  * Minimal zero-dependency .env loader. Looks for a `.env` next to the package

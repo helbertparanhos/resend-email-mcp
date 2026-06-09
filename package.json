@@ -1,6 +1,7 @@
 {
   "name": "resend-email-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "mcpName": "io.github.helbertparanhos/resend-email-mcp",
   "description": "The most complete MCP server for the Resend API — send emails, manage domains, contacts, broadcasts, templates, webhooks, plus a unique debug/diagnostics layer (deliverability analysis, DNS troubleshooting, email inspection).",
   "type": "module",
   "bin": {

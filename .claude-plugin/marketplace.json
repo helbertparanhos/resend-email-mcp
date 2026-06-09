@@ -2,7 +2,7 @@
   "name": "resend-email-mcp",
   "displayName": "Resend Email MCP",
   "description": "The most complete MCP server for the Resend API — emails, domains, contacts, broadcasts, templates, webhooks, plus a unique debug/diagnostics layer (deliverability, DNS, bounces).",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "helbertparanhos",
   "license": "MIT",
   "category": "Email",

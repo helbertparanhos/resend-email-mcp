@@ -3,6 +3,13 @@
 All notable changes to this project are documented here. Format based on
 [Keep a Changelog](https://keepachangelog.com/); this project follows [SemVer](https://semver.org/).
 
+## [1.0.1] - 2026-06-08
+
+### Added
+- `mcpName` field in package.json (`io.github.helbertparanhos/resend-email-mcp`) to enable
+  listing on the official MCP Registry (and downstream directories like PulseMCP, mcp.so).
+- `server.json` manifest for the official MCP Registry.
+
 ## [1.0.0] - 2026-06-08
 
 Initial public release.

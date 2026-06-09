@@ -1,0 +1,54 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.helbertparanhos/resend-email-mcp",
+  "description": "Complete Resend email MCP: full API coverage + debug layer (deliverability, DNS, bounces).",
+  "title": "Resend Email MCP",
+  "version": "1.0.1",
+  "repository": {
+    "url": "https://github.com/helbertparanhos/resend-email-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "resend-email-mcp",
+      "version": "1.0.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "RESEND_API_KEY",
+          "description": "Resend API key (https://resend.com/api-keys)",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "RESEND_FROM",
+          "description": "Default sender address (verified domain), e.g. 'Acme <hello@acme.com>'",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "RESEND_REPLY_TO",
+          "description": "Default Reply-To address",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "RESEND_READONLY",
+          "description": "Set to 'true' to block every mutating tool",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "RESEND_ATTACHMENTS_DIR",
+          "description": "Directory that local-file attachments are restricted to (disk reads disabled unless set)",
+          "isRequired": false,
+          "isSecret": false
+        }
+      ]
+    }
+  ]
+}
