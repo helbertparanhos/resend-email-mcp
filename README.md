@@ -4,8 +4,25 @@
 
 Works with **Claude Code, Cursor, Claude Desktop**, and any other MCP client.
 
-[![npm](https://img.shields.io/npm/v/resend-email-mcp.svg)](https://www.npmjs.com/package/resend-email-mcp)
-![license](https://img.shields.io/badge/license-MIT-green.svg)
+[![npm version](https://img.shields.io/npm/v/resend-email-mcp.svg?style=flat-square)](https://www.npmjs.com/package/resend-email-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/helbertparanhos/resend-email-mcp?style=flat-square)](https://github.com/helbertparanhos/resend-email-mcp/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/helbertparanhos/resend-email-mcp?style=flat-square)](https://github.com/helbertparanhos/resend-email-mcp/network/members)
+[![GitHub Issues](https://img.shields.io/github/issues/helbertparanhos/resend-email-mcp?style=flat-square)](https://github.com/helbertparanhos/resend-email-mcp/issues)
+[![Glama Quality](https://glama.ai/mcp/servers/helbertparanhos/resend-email-mcp/badges/score.svg)](https://glama.ai/mcp/servers/helbertparanhos/resend-email-mcp)
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-000000?style=flat-square)](https://modelcontextprotocol.io/)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-D97706?style=flat-square)](https://claude.ai/code)
+[![Cursor](https://img.shields.io/badge/Cursor-Compatible-4F46E5?style=flat-square)](https://cursor.sh)
+[![Claude Desktop](https://img.shields.io/badge/Claude%20Desktop-Compatible-D97706?style=flat-square)](https://claude.ai/download)
+
+[![Instagram](https://img.shields.io/badge/@helbertparanhos-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/helbertparanhos)
+[![YouTube](https://img.shields.io/badge/stratacademy-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@stratacademy)
+[![LinkedIn](https://img.shields.io/badge/helbert--paranhos-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/helbert-paranhos/)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/helbertparanhos)
+[![Strat Academy](https://img.shields.io/badge/Strat%20Academy-8B5CF6?style=flat-square)](https://stratacademy.com.br)
 
 ---
 
